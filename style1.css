@@ -1,0 +1,176 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+   body{
+	background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+}
+   .menu-bar ul{
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+	align-items: center;
+	
+}
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+   .menu-bar{
+   background-color: pink;
+   overflow: hidden;
+   top: 0;
+
+}
+
+    .menu-bar ul{
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+	text-align: right;
+}
+   .menu-bar ul li{
+	margin: 25px;
+	width: 120px;
+	padding: 15px;
+	text-align: right;
+}
+.menu-bar li  
+{
+	float:left;
+	list-style:none;
+	text-align: right;
+}
+}
+.menu-bar li a{
+	padding: 3px 3px;
+}
+.menu-bar ul li
+{
+	margin: 15px;
+
+	padding: 15px;
+}
+ h1{
+ 	width: 100%;
+ 	height: 100%;
+ 	color: orange;
+ }
+ input[type=text], input[type=til], input[type=pag], input[type=sta] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#status{
+	width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 5px 30px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.submit{
+        background-color: white;
+        border: 2px solid black;
+        color: green;
+        padding: 5px 10px;
+        text-align: center;
+        display: inline-block;
+        font-size: 20px;
+        margin: 10px 30px;
+        cursor: pointer;
+        }
+#table {
+  display: none;
+}

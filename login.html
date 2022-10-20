@@ -1,0 +1,109 @@
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+  table, th, td {
+  border: 1px solid black;
+  padding: 20px 20px;
+}
+table {
+  border-spacing: 100px;
+}
+</style>
+</head>
+<body>
+<div id="enter">
+    <label for="author">Author </label>
+    <input type="text" id="inputTitle" placeholder="Author"></br>
+    <label for="title">Title: </label>
+    <input type="text" id="inputAuthor" placeholder="Title"></br>
+    <label for="pages">Pages: </label>
+    <input type="text" id="inputPages" placeholder="Pages"></br>
+    <label for="status">Status </label>
+    <select id="readingProgress">
+      <option disabled>--Select--</option>
+      <option>Read</option>
+      <option>In Progress</option>
+      <option>Not Read</option>
+    </select>
+    <div id=submit>
+      <button id="submit">Submit</button>
+    </div>
+    <div class = "container-md mt-3 border">
+    <table>
+      <thead>
+        <tr>
+          <div class = "col-3"> <th>Author</th></div>
+          <div class = "col-3"> <th>Title</th></div>
+          <div class = "col-3"> <th>Pages</th></div>
+          <div class = "col-3"> <th>Status</th></div>
+        </tr>
+        </thead>
+          <tbody id="bookList">
+          </tbody>
+    </table>
+ </div>
+    <script>
+      let myLibrary = []
+      const submit = document.querySelector('#submit')
+      const list = document.querySelector("#bookList")
+      const bookTitle = document.querySelector('#inputAuthor')
+      const bookAuthor = document.querySelector('#inputTitle')
+      const bookPages = document.querySelector('#inputPages')
+      const readOptions = document.querySelector('select')
+      function Book(title, author, pages, read) {
+        this.title = title
+        this.author = author
+        this.pages = pages
+        this.read = read
+      }
+      function addBookToLibrary() {
+        if (bookTitle.value && bookAuthor.value && bookPages.value && readOptions.value) {
+          myLibrary.push(new Book(bookTitle.value, bookAuthor.value, bookPages.value, readOptions.value))
+        } else {
+          alert("Please enter all information")
+        }
+        console.log(myLibrary)
+      }
+      function displayBooks(book) {
+        const row = document.createElement('tr')
+        const createTitle = document.createElement('td')
+        const createAuthor = document.createElement('td')
+        const createPages = document.createElement('td')
+        const createStatus = document.createElement('td')
+        createTitle.innerHTML = book.title
+        createAuthor.innerHTML = book.author
+        createPages.innerHTML = book.pages
+        createStatus.innerHTML = book.read
+        row.appendChild(createTitle)
+        row.appendChild(createAuthor)
+        row.appendChild(createPages)
+        row.appendChild(createStatus)
+        list.appendChild(row)
+        createTitle.classList.add('deleteRow')
+      }
+      list.addEventListener('click', function removeBook(e) {
+        if (e.target.classList.contains('deleteRow')) {
+          let eachIndex = e.target.parentElement.rowIndex - 1
+          console.log(eachIndex)
+          e.target.parentElement.remove()
+          myLibrary.forEach((book, index) => {
+            if (index === eachIndex) {
+              myLibrary.splice[eachIndex, 1]
+            }
+          })
+        }
+        console.log(myLibrary)
+      })
+      submit.addEventListener('click', (e) => {
+        addBookToLibrary()
+        displayBooks(myLibrary[myLibrary.length - 1])
+      })
+    </script>
+</body>
+</html>
