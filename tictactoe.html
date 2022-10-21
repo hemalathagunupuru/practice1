@@ -1,0 +1,109 @@
+<html>
+<head>
+    <meta name="viewport" content=
+        "width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="tictactoe.js"></script>
+    <style>
+    h1 {
+        color: pink;
+        font-size: 50px;
+        text-align: center;
+    }
+    #but1, #but2, #but3, #but4, #but5,
+    #but6, #but7, #but8, #but9 {
+        width: 80px;
+        height: 52px;
+        margin: auto;
+        border: 1px solid gray;
+        border-radius: 6px;
+        font-size: 30px;
+        text-align: center;
+    }
+    #but {
+        box-sizing: border-box;
+        width: 95px;
+        height: 40px;
+        border: 1px orange;
+        margin: auto;
+        border-radius: 4px;
+        font-family: Verdana,
+            Geneva, Tahoma, sans-serif;
+ 
+        background-color: orange;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    #print {
+        font-family: Verdana,
+            Geneva, Tahoma, sans-serif;
+ 
+        color: dodgerblue;
+        font-size: 20px;
+    }
+
+    #id1 {
+        text-align: center;
+    }
+
+    #ins {
+        font-family: Verdana,
+            Geneva, Tahoma, sans-serif;
+             
+        color: dodgerblue;
+        font-size: 17px;
+    }
+</style>
+</head>
+   
+<body>
+    <div id="id1">
+        <h1>TIC TAC TOE</h1>
+   
+        <p id="ins">Game starts by just Tap on 
+            box<br><br>First Player starts as 
+            <b>Player X</b><br>And<br>Second 
+            Player as <b>Player 0</b>
+        </p>
+        <br><br>
+        <input type="text" id="but1" onclick=
+            "func3(); func();" readonly>
+   
+        <input type="text" id="but2" onclick=
+            "func4(); func();" readonly>
+   
+        <input type="text" id="but3" onclick=
+            "func5(); func();" readonly>
+        <br><br>
+   
+        <input type="text" id="but4" onclick=
+            "func6(); func();" readonly>
+               
+        <input type="text" id="but5" onclick=
+            "func7(); func();" readonly>
+   
+        <input type="text" id="but6" onclick=
+            "func8(); func();" readonly>
+        <br><br>
+   
+        <input type="text" id="but7" onclick=
+            "func9(); func();" readonly>
+   
+        <input type="text" id="but8" onclick=
+            "func10();func();" readonly>
+   
+        <input type="text" id="but9" onclick=
+            "func11();func();" readonly>
+        <br><br><br>
+        <button id="but" onclick="func2()">
+            RESET
+        </button>
+   
+        <br><br>
+        <p id="print"></p>
+    </div>
+</body>
+   
+</html>
